@@ -72,7 +72,7 @@ print(paste0("The corresponding file for the analysis is ", FileName_Data))
 
 ################################################################################
 ####STEP 2 : Group data and delete unused ones ####
-#if R2 value is under 0.95, delete row
+#if R2 value is under 0.90, delete row
 Data_filt = Data[!(Data$R2 <= 0.90),]
 Suppr = nrow(Data) - nrow(Data_filt)
 Message1 = paste0("Le nombre de lignes supprimées car R2 < 0.90 est de ",Suppr," sur ",nrow(Data))
